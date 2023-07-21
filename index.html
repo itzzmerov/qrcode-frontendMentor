@@ -10,19 +10,111 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --light-gray: hsl(212, 45%, 89%);
+      --grayish-blue: hsl(220, 15%, 55%);
+      --dark-blue: hsl(218, 44%, 22%);
+      --outfit: 'Outfit', sans-serif;
+    }
+
+    body {
+      font-size: 15px;
+      font-family: var(--outfit);
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 6%;
+    }
+
+    .container .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 85%;
+      background-color: var(--light-gray);
+      border-radius: 25px;
+    }
+
+    .wrapper .qrcode-holder {
+      width: 300px;
+      background-color: var(--white);
+      border-radius: 25px;
+      margin: 50px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .wrapper .qrcode-holder img {
+      width: 300px;
+      border-radius: 20px;
+    }
+
+    .wrapper .qrcode-holder .text {
+      padding: 30px;
+    }
+
+    .wrapper .qrcode-holder .text h1 {
+      font-weight: 700;
+      color: var(--dark-blue);
+      font-size: 1.3rem;
+    }
+
+    .wrapper .qrcode-holder .text h3 {
+      font-weight: 400;
+      color: var(--grayish-blue);
+      font-size: 0.9rem;
+    }
+
+    .attribution { margin-top:50px; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+
+    /**** RESPONSIVENESS ****/
+
+    @media screen and (max-width: 375px) {
+      .wrapper .qrcode-holder {
+        width: 175px;
+      }
+      
+      .wrapper .qrcode-holder img {
+        width: 175px;
+      }
+
+      .wrapper .qrcode-holder .text h1 {
+        font-size: 1rem;
+      }
+
+      .wrapper .qrcode-holder .text h3 {
+        font-size: 0.8rem;
+      }
+    }
+
   </style>
 </head>
 <body>
 
-  Improve your front-end skills by building projects
-
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+  <div class="container">
+    <div class="wrapper">
+      <div class="qrcode-holder">
+        <img src="images/image-qr-code.png" alt="QR code">
+        <div class="text">
+          <h1>Improve your front-end skills by building projects</h1>
+          <h3>Scan the QR code to visit Frontend Mentor and take your coding skills to the next level</h3>
+        </div>
+      </div>
+    </div>
+  </div>
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">John Rovie R. Balingbing</a>.
   </div>
 </body>
 </html>
